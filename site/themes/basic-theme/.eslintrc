@@ -1,0 +1,19 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 6
+	},
+	"rules": {
+		"no-unused-vars": 0,
+		"no-undef": 0
+	},
+	"env": {
+		"browser": true,
+		"amd": true,
+		"node": true
+	},
+	"globals": {
+		"$": true,
+		"require": true,
+		"define": true
+	}
+}

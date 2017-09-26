@@ -1,0 +1,49 @@
+{
+  "name": "stillas-theme",
+  "version": "0.0.1",
+  "description": "Basic theme for Hugo framework.",
+  "scripts": {
+    "css-lint": "node_modules/stylint/bin/stylint src/stylus/output/../ --config .stylintrc",
+    "css-compile": "rm -rf static/css && mkdir -p static/css && node_modules/stylus/bin/stylus --sourcemap --compress src/stylus/output --out static/css --use ./node_modules/nib/lib/nib",
+    "css-watch": "rm -rf static/css && mkdir -p static/css && node_modules/stylus/bin/stylus --sourcemap --compress src/stylus/output --out static/css --use ./node_modules/nib/lib/nib --watch",
+    "css": "npm run css-lint && npm run css-compile",
+    "js-lint": "node_modules/eslint/bin/eslint.js src/js/app/**/",
+    "js-compile": "rm -rf static/js && mkdir -p static/js && node_modules/babel-cli/bin/babel.js src/js/app/**/* -o static/js/bundle.js && NODE_ENV=$ENV node_modules/browserify/bin/cmd.js -g envify -e static/js/bundle.js -o static/js/bundle.js && node_modules/uglify-js/bin/uglifyjs static/js/bundle.js -c -o static/js/bundle.js",
+    "js-watch": "node_modules/watch-cli/bin/watch  -p src/js/app/**/* -c 'rm -rf static/js && mkdir -p static/js && node_modules/babel-cli/bin/babel.js src/js/app/**/* -o static/js/bundle.js && NODE_ENV=development node_modules/browserify/bin/cmd.js -g envify -e static/js/bundle.js -o static/js/bundle.js'",
+    "js": "npm run js-lint && npm run js-compile",
+    "watch": "npm run css-watch & npm run js-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stillas/theme.git"
+  },
+  "keywords": [
+    "blank",
+    "clean",
+    "go",
+    "hugo",
+    "starter",
+    "theme",
+    "empty"
+  ],
+  "author": "Marcos Garcia de Lima <marckfree@gmail.com> (http://marcker.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stillas/theme/issues"
+  },
+  "homepage": "https://github.com/stillas/theme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browserify": "^14.4.0",
+    "colors.stylus": "^1.0.1",
+    "envify": "^4.1.0",
+    "eslint": "^4.5.0",
+    "nib": "^1.1.2",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "uglify-js": "^3.0.28",
+    "vue": "^2.4.3",
+    "watch-cli": "^0.2.2"
+  }
+}
