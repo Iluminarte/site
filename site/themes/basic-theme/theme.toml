@@ -1,10 +1,10 @@
-description = "Basic theme for Hugo framework."
-homepage = "https://github.com/stillas/theme"
+description = "Instituto Social Acadêmicos Iluminarte"
+homepage = ""
 license = "MIT"
-licenselink = "https://github.com/stillas/theme/blob/development/license.md"
+licenselink = "https://github.com/Iluminarte/site/blob/development/license.md"
 min_version = 0.26
-name = "stillas"
-tags = ["blank", "clean", "developer", "empty", "minimal", "minimalist", "simple", "starter", "theme"]
+name = "iluminarte-site"
+tags = ["iluminarte", "blank", "clean", "developer", "empty", "minimal", "minimalist", "simple", "starter", "theme"]
 
 [author]
 homepage = "https://github.com/marcker"
