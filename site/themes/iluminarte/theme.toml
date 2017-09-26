@@ -1,10 +1,16 @@
-description = "Instituto Social Acadêmicos Iluminarte"
+baseURL = ""
+disableHugoGeneratorInject = true
 homepage = ""
+languageCode = "pt-br"
 license = "MIT"
 licenselink = "https://github.com/Iluminarte/site/blob/development/license.md"
 min_version = 0.26
-name = "iluminarte-site"
+name = "iluminarte"
 tags = ["iluminarte", "blank", "clean", "developer", "empty", "minimal", "minimalist", "simple", "starter", "theme"]
+title = "Instituto Social Acadêmicos Iluminarte"
+
+[params]
+description = "Instituto Social Acadêmicos Iluminarte"
 
 [author]
 homepage = "https://github.com/marcker"
