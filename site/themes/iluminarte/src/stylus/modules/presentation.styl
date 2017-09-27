@@ -1,0 +1,34 @@
+.presentation {
+	padding: 20px;
+
+	h2,
+	p {
+		@extend $font-smoothing;
+		color: black;
+		font-family: "El Messiri", sans-serif;
+		line-height: 1;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 20px;
+		margin-bottom: 20px;
+		line-height: 1.3;
+	}
+}
+
+@media all and (min-width: 50em) {
+	.presentation {
+		padding-bottom: 50px;
+		padding-top: 50px;
+
+		h2 {
+			font-size: 40px;
+		}
+	}
+}

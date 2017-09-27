@@ -1,0 +1,8 @@
+<div class="section-wrapper presentation">
+	<div class="content-holder">
+		<h2>{{ .Site.Data.index.tituloApresentacao }}</h2>
+		{{ range .Site.Data.index.textoApresentacao }}
+		<p>{{ safeHTML . }}</p>
+		{{ end }}
+	</div>
+</div>

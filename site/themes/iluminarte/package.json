@@ -40,6 +40,7 @@
     "envify": "^4.1.0",
     "eslint": "^4.5.0",
     "nib": "^1.1.2",
+    "normalize-styl": "^4.1.1",
     "stylint": "^1.5.9",
     "stylus": "^0.54.5",
     "uglify-js": "^3.0.28",

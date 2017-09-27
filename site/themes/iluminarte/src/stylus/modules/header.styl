@@ -1,3 +1,38 @@
 header {
-	outline: 1px solid green;
+	background-color: yellow;
+	padding: 20px
+
+	h1 {
+		@extend $font-smoothing;
+		border-bottom: 2px solid navy;
+		border-top: 2px solid navy;
+		color: navy;
+		font-family: "El Messiri", sans-serif;
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 1;
+		padding: 20px 0;
+	}
+
+	strong {
+		font-size: 26px;
+	}
+}
+
+@media all and (min-width: 50em) {
+	header {
+		padding-bottom: 50px;
+		padding-top: 50px;
+
+		h1 {
+			border-bottom-width: 5px;
+			border-top-width: 5px;
+			font-size: 40px;
+			padding: 50px 0;
+		}
+
+		strong {
+			font-size: 44px;
+		}
+	}
 }
