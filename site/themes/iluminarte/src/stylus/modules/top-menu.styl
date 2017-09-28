@@ -1,0 +1,57 @@
+nav {
+	background-color: navy;
+	padding: 20px;
+
+	a {
+		@extend $font-smoothing;
+		box-sizing: border-box;
+		color: white;
+		cursor: pointer;
+		display: block;
+		font-family: "Lilita One", sans-serif;
+		font-size: 20px;
+		padding: 10px 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		transform: color .2s ease;
+	}
+}
+
+@media all and (min-width: 50em) {
+	nav {
+		padding-bottom: 50px;
+		padding-top: 50px;
+
+		ul {
+			font-size: 0;
+		}
+
+		li {
+			display: inline-block;
+
+			&:first-child {
+				a {
+					margin-left: 0;
+				}
+			}
+
+			&:last-child {
+				a {
+					margin-right: 0;
+				}
+			}
+		}
+
+
+
+		a {
+			margin: 0 20px;
+
+			&:hover {
+				color: silver;
+			}
+
+
+		}
+	}
+}
