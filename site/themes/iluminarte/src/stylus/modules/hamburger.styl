@@ -1,0 +1,52 @@
+.hamburger {
+	text-align: right;
+
+	.content-holder {
+		cursor: pointer;
+		display: inline-block;
+		padding: 10px;
+		vertical-align: middle;
+
+		&:active,
+		&:hover {
+			span {
+				background-color: lighten(yellow, 40%);
+			}
+		}
+	}
+
+	span {
+		@extend $font-smoothing;
+		background-color: yellow;
+		border-radius: 2px;
+		display: block;
+		height: 4px;
+		margin-bottom: 4px;
+		transition: background-color .2s ease, transform .2s ease;
+		width: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.-closed {
+		.content-holder {
+			height: 20px;
+		}
+
+		span {
+			&:nth-child(2) {
+				display: none;
+			}
+
+			&:first-child {
+				transform: translateY(8px) rotate(45deg);
+			}
+
+			&:last-child {
+				transform: rotate(-45deg) ;
+			}
+		}
+	}
+}
