@@ -1,6 +1,23 @@
 nav {
 	background-color: navy;
-	padding: 20px;
+
+	ul {
+		text-align: center;
+	}
+
+	li {
+		&:first-child {
+			a {
+				padding-top: 0;
+			}
+		}
+
+		&:last-child {
+			a {
+				padding-bottom: 0;
+			}
+		}
+	}
 
 	a {
 		@extend $font-smoothing;
@@ -13,17 +30,15 @@ nav {
 		padding: 10px 0;
 		text-decoration: none;
 		text-transform: uppercase;
-		transform: color .2s ease;
+		transition: color .2s ease;
 	}
 }
 
 @media all and (min-width: 50em) {
 	nav {
-		padding-bottom: 50px;
-		padding-top: 50px;
-
 		ul {
 			font-size: 0;
+			text-align: right;
 		}
 
 		li {
@@ -32,12 +47,14 @@ nav {
 			&:first-child {
 				a {
 					margin-left: 0;
+					padding-top: 10px;
 				}
 			}
 
 			&:last-child {
 				a {
 					margin-right: 0;
+					padding-bottom: 10px;
 				}
 			}
 		}
